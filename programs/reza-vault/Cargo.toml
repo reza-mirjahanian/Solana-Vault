@@ -1,0 +1,27 @@
+[package]
+name = "reza-vault"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "reza_vault"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+anchor-debug = []
+custom-heap = []
+custom-panic = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+anchor-lang = { version="0.31.1", features=["init-if-needed"] , default-features = false }
+anchor-spl = "0.31.1"
+
+
+
